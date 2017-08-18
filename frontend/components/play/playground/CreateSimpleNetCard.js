@@ -185,7 +185,7 @@ class CreateSimpleNetCard extends React.Component {
     updateTrainingData(output) {
         const trainingData = JSON.parse(JSON.stringify(this.state.trainingData));
         const options = this.getTrainingOptionArray(true);
-        const outputBinary = parseFloat('.'.concat(output.split('').map((char)=>(char.charCodeAt(0).toString(2))).join('')), 10);
+        const outputBinary = parseFloat('.'.concat(output.split('').map((char)=>(char.charCodeAt(0).toString())).join('')), 10);
         const newObj = {
             input: options,
             output: [outputBinary]
@@ -224,7 +224,7 @@ class CreateSimpleNetCard extends React.Component {
                 i = Math.floor((currIndex / decay) % this.state.options.inputTypes[n].length);
             }
             if(binary) {
-                returnArray.push(parseFloat('.'.concat(this.state.options.inputTypes[n][i].split('').map((char)=>(char.charCodeAt(0).toString(2))).join('')), 10));
+                returnArray.push(parseFloat('.'.concat(this.state.options.inputTypes[n][i].split('').map((char)=>(char.charCodeAt(0).toString())).join('')), 10));
             } else {
                 returnArray.push(this.state.options.inputTypes[n][i]);
             }
@@ -242,7 +242,7 @@ class CreateSimpleNetCard extends React.Component {
                   multiLine
                   onChange={(e, val)=>{
                       // Take the text field, split each line as separate input, convert to binary integer, create array element for each input example, push
-                      const binaries = val.split(/\n/).map((string)=>(parseFloat('.'.concat(string.split('').map((char)=>(char.charCodeAt(0).toString(2))).join('')), 10)));
+                      const binaries = val.split(/\n/).map((string)=>(parseFloat('.'.concat(string.split('').map((char)=>(char.charCodeAt(0).toString())).join('')), 10)));
                       const newBinaries = this.state.options.inputTypesBinary.slice();
                       newBinaries[n] = binaries.slice();
                       const newNonBinaries = this.state.options.inputTypes.slice();
