@@ -147,8 +147,9 @@ class CreateSimpleNetCard extends React.Component {
         const trainer = new Trainer(network);
         const set = JSON.parse(JSON.stringify(this.state.trainingData));
         const options = {
-            rate: 1.00,
+            rate: 3.00,
             error: 0.005,
+            iterations: 1000000,
             shuffle: false,
             log: 1000,
             cost: Trainer.cost.CROSS_ENTROPY

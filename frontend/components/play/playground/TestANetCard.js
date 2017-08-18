@@ -74,8 +74,9 @@ class TestANetCard extends React.Component {
         console.log(activationArray, result);
         let matchIndex = 0;
         let minError = 1;
-        for(let n = 0; n < this.state.NN.possible_outputs.binary; n++) {
+        for(let n = 0; n < this.state.NN.possible_outputs.binary.length; n++) {
             const instantaneousError = Math.abs(result - this.state.NN.possible_outputs.binary[n]);
+            console.log('error', instantaneousError);
             if( instantaneousError < minError) {
                 matchIndex = n;
                 minError = instantaneousError;
