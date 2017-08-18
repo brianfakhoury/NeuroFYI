@@ -1,0 +1,42 @@
+body{
+  margin: 0;
+  overflow: hidden;
+}
+canvas {
+  position: absolute;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+
+#center-container {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#center-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70vh;
+  height: 70vh;
+  padding: 2vh
+}
+
+#brain-logo {
+  width: 25vh;
+  margin: 1vh;
+}
+
+#welcome-text h1 {
+  color: white;
+  font-size: 60px;
+  text-align: center;
+}
+
+#welcome-text h2 {
+    text-align: center;
+}

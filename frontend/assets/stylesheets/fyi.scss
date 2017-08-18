@@ -1,0 +1,33 @@
+
+.banner {
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    height: 75vh;
+}
+
+.banner-center {
+    margin-left: 20vw;
+    margin-right: 20vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.translucent {
+    background-color: rgba(20, 20, 20, .75);
+}
+
+svg {
+    overflow: visible;
+}
+
+#nn1, #nn2 {
+    width: 50vw;
+    height: 50vh;
+}
+
+#neuron1 {
+    width: 20vh;
+    height: 20vh
+}

@@ -1,0 +1,81 @@
+.login-div {
+    padding: 20px;
+    margin-left: 37vw;
+    margin-right: 37vw;
+    margin-top: 10vh;
+    margin-bottom: 40vh;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+//
+
+.content-div {
+    background-color: #212121;
+    height: 100%;
+    display: flex;
+}
+
+.main-content-div-container {
+    height: calc(100vh - 64px);
+    display: inline-block;
+    overflow: scroll;
+}
+
+.main-content-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: calc(100vw - 300px);
+}
+
+.side-bar {
+    height: 100vh;
+    width: 300px;
+    background-color: #616161;
+    padding-top: 3px;
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+}
+
+.card-content-container {
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.6);
+    background-color: #0D47A1;
+    border-radius: 2px;
+    width: 700px;
+}
+
+.card-content {
+    height: 100%;
+}
+
+.close-button {
+    position: fixed;
+    float: right;
+}
+
+.selectCreate1 {
+    width: 33% !important
+}
+
+.net-options-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.option-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.processing-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

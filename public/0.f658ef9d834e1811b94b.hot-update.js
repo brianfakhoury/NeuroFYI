@@ -1,0 +1,16 @@
+webpackHotUpdate(0,{
+
+/***/ 376:
+/* unknown exports provided */
+/* all exports used */
+/*!******************************************!*\
+  !*** ./frontend/reducers/playReducer.js ***!
+  \******************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar createInitState = function createInitState() {\n    return {\n        user: null,\n        cardScreens: []\n    };\n};\n\nvar playReducer = function playReducer() {\n    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : createInitState();\n    var action = arguments[1];\n\n    switch (action.type) {\n        case 'loadUser':\n            return Object.assign({}, state, { user: action.user });\n        case 'showCardScreen':\n            var newArray0 = state.cardScreens.concat([action.cardIndex]);\n            console.log(newArray0);\n            return Object.assign({}, state, { cardScreens: newArray0 });\n        case 'closeCard':\n            console.log(action.index);\n            var newArray1 = state.cardScreens.slice();\n            newArray1.splice(action.index, 1);\n            console.log(newArray1);\n            return Object.assign({}, state, { cardScreens: newArray1 });\n        default:\n            return state;\n    }\n};\n\nexports.default = playReducer;//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMzc2LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL2Zyb250ZW5kL3JlZHVjZXJzL3BsYXlSZWR1Y2VyLmpzPzYxYTkiXSwic291cmNlc0NvbnRlbnQiOlsiXG5jb25zdCBjcmVhdGVJbml0U3RhdGUgPSAoKSA9PiAoXG4gICAge1xuICAgICAgICB1c2VyOiBudWxsLFxuICAgICAgICBjYXJkU2NyZWVuczogW11cbiAgICB9XG4pO1xuXG5jb25zdCBwbGF5UmVkdWNlciA9IChzdGF0ZSA9IGNyZWF0ZUluaXRTdGF0ZSgpLCBhY3Rpb24pID0+IHtcbiAgICBzd2l0Y2ggKGFjdGlvbi50eXBlKSB7XG4gICAgICAgIGNhc2UgJ2xvYWRVc2VyJzpcbiAgICAgICAgICAgIHJldHVybiBPYmplY3QuYXNzaWduKHt9LCBzdGF0ZSwge3VzZXI6IGFjdGlvbi51c2VyfSk7XG4gICAgICAgIGNhc2UgJ3Nob3dDYXJkU2NyZWVuJzpcbiAgICAgICAgICAgIGNvbnN0IG5ld0FycmF5MCA9IHN0YXRlLmNhcmRTY3JlZW5zLmNvbmNhdChbYWN0aW9uLmNhcmRJbmRleF0pO1xuICAgICAgICAgICAgY29uc29sZS5sb2cobmV3QXJyYXkwKTtcbiAgICAgICAgICAgIHJldHVybiBPYmplY3QuYXNzaWduKHt9LCBzdGF0ZSwge2NhcmRTY3JlZW5zOiBuZXdBcnJheTB9KTtcbiAgICAgICAgY2FzZSAnY2xvc2VDYXJkJzpcbiAgICAgICAgICAgIGNvbnNvbGUubG9nKGFjdGlvbi5pbmRleCk7XG4gICAgICAgICAgICBjb25zdCBuZXdBcnJheTEgPSBzdGF0ZS5jYXJkU2NyZWVucy5zbGljZSgpO1xuICAgICAgICAgICAgbmV3QXJyYXkxLnNwbGljZShhY3Rpb24uaW5kZXgsIDEpO1xuICAgICAgICAgICAgY29uc29sZS5sb2cobmV3QXJyYXkxKTtcbiAgICAgICAgICAgIHJldHVybiBPYmplY3QuYXNzaWduKHt9LCBzdGF0ZSwge2NhcmRTY3JlZW5zOiBuZXdBcnJheTF9KTtcbiAgICAgICAgZGVmYXVsdDpcbiAgICAgICAgICAgIHJldHVybiBzdGF0ZTtcbiAgICB9XG59O1xuXG5leHBvcnQgZGVmYXVsdCBwbGF5UmVkdWNlcjtcblxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyBmcm9udGVuZC9yZWR1Y2Vycy9wbGF5UmVkdWNlci5qcyJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQ0E7QUFBQTtBQUVBO0FBQ0E7QUFGQTtBQURBO0FBQ0E7QUFNQTtBQUFBO0FBQUE7QUFDQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQWRBO0FBZ0JBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==");
+
+/***/ })
+
+})
