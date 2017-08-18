@@ -34,7 +34,7 @@ class CreateSimpleNetCard extends React.Component {
                 outputTypes: [],
                 outputTypesBinary: [],
             },
-            trainingText: "",
+            trainingText: [],
             trainingData: [],
             NN: {}
         };
@@ -114,7 +114,7 @@ class CreateSimpleNetCard extends React.Component {
                           <MenuItem value={4} primaryText="4" />
                           <MenuItem value={5} primaryText="5" />
                         </SelectField>
-                        <h2 style={{marginBottom: 0}}>{this.state.trainingText}</h2>
+                        <h3 style={{marginBottom: 0}}>{this.state.trainingText}</h3>
                         {this.renderInputOption()}
                     </div>
                 </div>);
@@ -123,7 +123,7 @@ class CreateSimpleNetCard extends React.Component {
                     <h2 style={{marginBottom: 0}}>The network is initialized! Now specify the data</h2>
                     {this.renderInputSpec()}
                     <h2>Create the supervised data! For each input condition, enter the correct output. Click start training whenever you are ready!</h2>
-                    <h3>{this.state.trainingText}</h3>
+                    <div>{this.state.trainingText}</div>
                     <TextField hintText="Output" onKeyPress={e=>{
                         if(e.key === 'Enter') {
                             this.updateTrainingData.call(this, e.target.value);
@@ -199,14 +199,14 @@ class CreateSimpleNetCard extends React.Component {
         this.setState({trainingData: trainingData, options: outputOptions}, this.setTrainingText);
     }
     setTrainingText() {
-        let returnString = "";
+        const returnStrings = [];
         const data = this.getTrainingOptionArray();
         for(var n = 0; n < data.length; n++) {
             const inputName = this.state.options.inputDescriptions[n];
             const inputChoice = data[n];
-            returnString = returnString.concat(`${inputName}: ${inputChoice} `);
+            returnStrings.push(<h3 key={n}>{inputName + ' : ' + inputChoice}</h3>);
         }
-        this.setState({trainingText: returnString});
+        this.setState({trainingText: returnStrings});
     }
     getTrainingOptionArray(binary) {
         const returnArray = [];
