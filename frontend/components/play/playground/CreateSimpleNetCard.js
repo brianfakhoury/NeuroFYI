@@ -45,6 +45,7 @@ class CreateSimpleNetCard extends React.Component {
         }
         if(this.state.step === 1) {
             this.setState({processing: true});
+            this.trainNetwork();
             setTimeout(()=> {
                 this.setState({processing: false});
                 this.handleNext();
@@ -61,7 +62,7 @@ class CreateSimpleNetCard extends React.Component {
             this.setState({step: step - 1});
         }
     }
-    handleOptChange(op, event, index, value) {
+    handleOptChange(op, e, index, value) {
         switch(op) {
             case 0:
                 const op0 = Object.assign({}, this.state.options, {desc: index});
@@ -132,9 +133,7 @@ class CreateSimpleNetCard extends React.Component {
                     }} />
                 </div>);
             case 2:
-                return (<div>
-                    {this.trainNetwork()}
-                </div>);
+                return (<div />);
             case 3:
                 return (<div />);
             default:
