@@ -7,14 +7,9 @@ module.exports = {
     ],
     module: {
         rules: [
-            { test: /\.js?$/, loader: 'babel-loader', exclude: /node_modules/, options: {
-                    presets: ['es2015', 'react' ]
-                } },
+            { test: /\.js?$/, loader: 'babel-loader', exclude: /node_modules/, options: { presets: ['es2015', 'react' ] } },
             { test: /\.s?css$/, loader: 'style-loader!css-loader!sass-loader' },
-            {
-                test: require.resolve('snapsvg'),
-                loader: 'imports-loader?this=>window,fix=>module.exports=0'
-            },
+            { test: require.resolve('snapsvg'), loader: 'imports-loader?this=>window,fix=>module.exports=0'},
         ],
     },
     resolve: {
@@ -28,7 +23,7 @@ module.exports = {
     devtool: 'cheap-eval-source-map',
     devServer: {
         contentBase: './public',
-        hot: true
+        hot: false
     },
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
