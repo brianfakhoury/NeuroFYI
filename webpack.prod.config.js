@@ -20,14 +20,9 @@ module.exports = {
         publicPath: '/',
         filename: 'bundle.js'
     },
-    devtool: 'cheap-eval-source-map',
-    devServer: {
-        contentBase: './public',
-        hot: true
-    },
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
+        // new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.DefinePlugin({
             "process.env": {

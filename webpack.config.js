@@ -7,7 +7,7 @@ module.exports = {
     ],
     module: {
         rules: [
-            { test: /\.js?$/, loader: 'babel-loader', exclude: /node_modules/, options: { presets: ['es2015', 'react' ] } },
+            { test: /\.js?$/, loader: 'babel-loader', exclude: /node_modules/, query: { presets: ['es2015', 'react' ] } },
             { test: /\.s?css$/, loader: 'style-loader!css-loader!sass-loader' },
             { test: require.resolve('snapsvg'), loader: 'imports-loader?this=>window,fix=>module.exports=0'},
         ],
@@ -27,7 +27,7 @@ module.exports = {
     },
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
+        // new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin()
     ]
 };
