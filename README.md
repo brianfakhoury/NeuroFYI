@@ -15,9 +15,10 @@ This project uses full stack javascript to build neural networks under a web app
 Install dependencies: `$ yarn`
 
 Fire up a development server: `$ yarn run dev`
-Or if you're brave: `$ yarn run build` and `yarn start`
 
 Once the server is running, you can visit `http://localhost:3000/`
+
+* Note, you need to source a MONGODB_URI in the environment to your own MongoDB. 
 
 ## File layout
 
