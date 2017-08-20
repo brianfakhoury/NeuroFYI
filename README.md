@@ -1,9 +1,9 @@
 # NeuroFYI
 You don't need to understand how exactly a neural networks, just know what they can do.
 
-## Overview
+This project uses full stack javascript to build neural networks under a web app wrapper.
 
-Dev:
+## Dev Overview
 
 * a lightweight webpack config (for development and production)
 * some helpful tooling for development workflow
