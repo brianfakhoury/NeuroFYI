@@ -141,7 +141,6 @@ class CreateSimpleNetCard extends React.Component {
         }
     }
     trainNetwork() {
-        console.log(this.state);
         const network = Network.fromJSON(this.state.NN);
         const trainer = new Trainer(network);
         const set = JSON.parse(JSON.stringify(this.state.trainingData));

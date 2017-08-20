@@ -14,13 +14,14 @@ const
     // API routes for handling specific requests
     api = require('./routes'),
     auth = require('./routes/auth'),
+    assetsFolder = path.resolve(__dirname, '../public'),
     // Import MongoDB configuration and access
     models = require('./models'),
     User = models.User;
 
 // ***** Set up middleware
 // Configure assets access
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(assetsFolder));
 // Make the body of a request available in req.body
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -65,7 +66,7 @@ app.use(passport.session());
 // Send React package for all get routes..
 //  Further logic is taken care of by React-router
 app.get('/*', (req, res) => {
-    res.sendFile(__dirname + '../public/index.html');
+    res.sendFile(assetsFolder + '/index.html');
 });
 // Apply middleware for authentication
 //   Check for authentication route

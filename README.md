@@ -1,31 +1,32 @@
-# React + Node Starter
-_for [Heroku](https://www.heroku.com/) deployment_
+# NeuroFYI
+You don't need to understand how exactly a neural networks, just know what they can do.
 
 ## Overview
 
-This is a simple starter to get you up and running for React projects. This is intended to provide:
+Dev:
 
 * a lightweight webpack config (for development and production)
 * some helpful tooling for development workflow
-* a similar setup to what you'll see in the wild
+* production functionality
 * Heroku-ready deployment setup
 
 ## Running
 
-Install dependencies: `$ npm install` or `$ yarn`
+Install dependencies: `$ yarn`
 
-Fire up a development server: `$ npm run dev`
+Fire up a development server: `$ yarn run dev`
+Or if you're brave: `$ yarn run build` and `yarn start`
 
 Once the server is running, you can visit `http://localhost:3000/`
 
 ## File layout
 
 - **Frontend React**
-    - The top level application Container is in `frontend/containers/AppContainer.js`
-    - CSS styles are in `frontend/assets/stylesheets/base.scss`
+    - The top level application Container is in `frontend/components/App.js`
+    - CSS styles are in `frontend/assets/stylesheets/`
 - **Backend Express**
-    - Entry point is `server.js`
-    - API routes are under `backend/routes.js`
+    - Entry point is `backend/server.js`
+    - API routes are under `backend/routes/index.js`
     - API routes are served under `http://localhost:3000/api`
 
 ## Production Build
@@ -33,7 +34,7 @@ Once the server is running, you can visit `http://localhost:3000/`
 To build your production assets and run the server:
 
 ```
-$ npm start
+$ yarn start
 ```
 
 ## Deploying to Heroku
@@ -53,9 +54,3 @@ $ heroku open
 Heroku will follow the `build` command in your `package.json` and compile assets with `webpack.prod.config.js`. It runs the Express web server in `server.js`.
 
 If you're unfamiliar with Heroku deployment (or just need a refresher), they have a really great walkthrough [here](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction).
-
-## Running on Glitch
-
-1. Go to https://glitch.com/edit/#!/horizons-hackathon-react and click
-  `Remix this 🎤`
-1. Click `Show` at the top to preview your app!
